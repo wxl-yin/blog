@@ -9,14 +9,23 @@ use think\Model;
 class Base extends Model{
 
 	protected $autoWriteTimestamp = false;
-	protected $name;
+    protected $FormData; //接收表单数据
 
-	public function __construct($name=''){
-		parent::__construct();
-		if(!empty($name)){
-			$this->name=$name;
-		}
-	}
+    public function __construct($name=''){
+        if(!empty($name) && !empty($name['twothink_name']) && count($name) == 1){
+            $this->name=$name['twothink_name'];
+            parent::__construct();
+        }else{
+            parent::__construct($name);
+        }
+    }
+    public function initialize(){
+        $data = Request::instance()->param();
+        if(empty($data['id']))
+            unset($data['id']);
+        $this->FormData = $data;
+        parent::initialize();
+    }
 
 	/**
 	 * 获取模型详细信息

@@ -8,7 +8,7 @@ class Menu extends Validate{
     protected $rule = [
         ['title', 'require', '标题必须填写'],
         ['url', 'require', '链接必须填写'],
-
-    ];
+        
+    ];  
 
 }
