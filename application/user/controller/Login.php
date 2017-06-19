@@ -25,6 +25,7 @@ class Login extends Controller {
     }
     /* 登录页面 */
     public function index($username = '', $password = '', $verify = '',$type = 1){
+        captcha_img();
         if($this->request->isPost()){ //登录验证
             /* 检测验证码 */
             if(!captcha_check($verify)){

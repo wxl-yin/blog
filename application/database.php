@@ -11,17 +11,17 @@ return [
     // 数据库类型
     'type'           => 'mysql',
     // 服务器地址
-//    'hostname'       => '127.0.0.1',
-    'hostname'       => 'blog.maifeng.site',
+    'hostname'       => '127.0.0.1',
+//    'hostname'       => 'blog.maifeng.site',
     // 数据库名
-//    'database'       => 'twothinnk',
-    'database'       => 'blog',
+    'database'       => 'twothink',
+//    'database'       => 'blog',
     // 用户名
 //    'username'       => 'root',
     'username'       => 'root',
     // 密码
-//    'password'       => 'root',
-    'password'       => 'xl19910825',
+    'password'       => 'root',
+//    'password'       => 'xl19910825',
     // 端口
     'hostport'       => '3306',
     // 连接dsn

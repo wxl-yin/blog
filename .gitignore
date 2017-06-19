@@ -2,3 +2,5 @@
 composer.lock
 *.log
 runtime
+/public/static/static/.gitignore
+/vendor/.gitignore
